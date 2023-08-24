@@ -7,12 +7,7 @@
  * Return: 0 on success
  */
 
-	stack_t *head = NULL;
-	char **args = NULL;
-	FILE *file = NULL;
-	unsigned int tokens = 0;
-	unsigned int stacks = 0;
-	unsigned int line_nu = 1;
+data_t data = {NULL, NULL, NULL, 0, 0, 0};
 
 int main(int ac, char *av[])
 {
@@ -22,8 +17,8 @@ int main(int ac, char *av[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	file = fopen(av[1], "r");
-	if (!file)
+	data.file = fopen(av[1], "r");
+	if (!data.file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
