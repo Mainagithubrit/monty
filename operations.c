@@ -45,7 +45,7 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;
 
-	if (data.tokens < 2 || !is_number(data.args[1]))
+	if (data.tokens != 2 || !is_number(data.args[1]))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		cleanup(1);
