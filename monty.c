@@ -7,7 +7,7 @@
  * Return: 0 on success
  */
 
-data_t data = {NULL, NULL, NULL, 0, 0, 0};
+data_t data = {NULL, NULL, NULL, 0, 0, 1};
 
 int main(int ac, char *av[])
 {
