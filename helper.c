@@ -62,11 +62,15 @@ void mod_line(char *s)
  */
 int is_number(char *s)
 {
-	while (*s)
+	int i = 0;
+
+	if (s[i] == '-')
+	i++;
+	while (s[i])
 	{
-		if (*s < '0' || *s > '9')
+		if (s[i] < '0' || s[i] > '9')
 			return (0);
-		s++;
+		i++;
 	}
 	return (1);
 }

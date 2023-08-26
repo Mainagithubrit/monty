@@ -24,9 +24,15 @@ void execute(void)
 			cleanup(1);
 		}
 		tokenize(line);
+		if (data.args[0][0] == '#')
+		{
+			data.line_nu++;
+			free(data.args);
+			continue;
+		}
 		operate();
 		free(data.args);
-	}
+		}
 
 	cleanup(0);
 }

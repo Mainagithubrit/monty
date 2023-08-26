@@ -14,6 +14,10 @@ void operate(void)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
+		{"div", op_div},
+		{"mod", mod},
+		{"mul", mul},
 		{NULL, NULL}
 	};
 
