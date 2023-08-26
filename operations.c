@@ -18,6 +18,7 @@ void operate(void)
 		{"div", op_div},
 		{"mod", mod},
 		{"mul", mul},
+		{"pchar", pchar},
 		{NULL, NULL}
 	};
 

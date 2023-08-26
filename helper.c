@@ -65,7 +65,7 @@ int is_number(char *s)
 	int i = 0;
 
 	if (s[i] == '-')
-	i++;
+		i++;
 	while (s[i])
 	{
 		if (s[i] < '0' || s[i] > '9')

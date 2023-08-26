@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * mul - A function that implements the mod opcode
+ * mul - A function that implements the mul opcode
  * @stack: A pointer that points to an allocated memory
  * @line_number: the current line number being implemented
  */
@@ -52,12 +52,20 @@ void mod(stack_t **stack, unsigned int line_number)
  * @stack: A pointer that points to an allocated memory
  * @line_number: the current line number being implemented
  */
-
 void pchar(stack_t **stack, unsigned int line_number)
 {
+	int n;
+
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%d can't pchar, stack empty\n", line_number);
 		cleanup(1);
 	}
+	n = (*stack)->n;
+	if ((n < 'a' || n > 'z') && (n < 'A' || n > 'Z'))
+	{
+		fprintf(stderr, "L%d can't pchar, value out of range\n", line_number);
+		cleanup(1);
+	}
+	printf("%c\n", n);
 }

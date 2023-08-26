@@ -32,7 +32,7 @@ void execute(void)
 		}
 		operate();
 		free(data.args);
-		}
+	}
 
 	cleanup(0);
 }
