@@ -19,6 +19,8 @@ void operate(void)
 		{"mod", mod},
 		{"mul", mul},
 		{"pchar", pchar},
+		{"pstr", pstr},
+		{"rotl", rotl},
 		{NULL, NULL}
 	};
 

@@ -74,7 +74,7 @@ void sub(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * div - A function that implements the div opcode
+ * op_div - A function that implements the div opcode
  * @stack: A pointer that points to an allocated memory
  * @line_number: the current line number being implemented
  */
